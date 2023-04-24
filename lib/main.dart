@@ -1,3 +1,4 @@
+import 'package:camera_test_app/routes/app_pages.dart';
 import 'package:camera_test_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,8 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(colorScheme: const ColorScheme.dark()),
       debugShowCheckedModeBanner: false,
       title: 'Camera Test App',
-      initialRoute: AppRoutes.homePage,
-      getPages: routes,
+      initialRoute: AppRoutes.INITIAL,
+      getPages: AppPages.pages,
     );
   }
 }

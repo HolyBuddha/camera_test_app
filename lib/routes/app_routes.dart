@@ -1,16 +1,5 @@
-import 'package:camera_test_app/modules/home/bindings/home_binding.dart';
-import 'package:camera_test_app/modules/home/views/home_page.dart';
-import 'package:get/get.dart';
-
-
 class AppRoutes {
-  static const String homePage = '/homepage;';
+  // ignore: constant_identifier_names
+  static const String INITIAL = '/homepage;';
+  static const String imageDetails = '/imagedetails';
 }
-
-final routes = [
-  GetPage(
-    name: AppRoutes.homePage,
-    page: () => const HomePage(),
-    binding: HomeBinding()
-  ),
-];
