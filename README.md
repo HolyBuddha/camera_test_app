@@ -11,3 +11,12 @@
 - Для запросов к API: Http
 - Для сохранения фото: ImagePicker
 
+##Экраны приложения
+Главный экран, позволяет сделать фото по кнопке:
+![Screenshot_1682332128](https://user-images.githubusercontent.com/89085993/233971723-adce28b3-1148-45de-a4f3-48996064196c.png)
+
+Экран камеры:
+![Screenshot_1682332135](https://user-images.githubusercontent.com/89085993/233971948-a885ac82-0b6a-41b5-aa5f-a32cb4edc29f.png)
+
+Экран отображения результатов, при клике по ссылке она копируется в буфер обмена
+![Screenshot_1682332142](https://user-images.githubusercontent.com/89085993/233972075-35626889-9b2b-40db-bf69-cf2a264c0c95.png)
