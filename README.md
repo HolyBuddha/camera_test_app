@@ -12,11 +12,15 @@
 - Для сохранения фото: ImagePicker
 
 ##Экраны приложения
+
 Главный экран, позволяет сделать фото по кнопке:
-![Screenshot_1682332128](https://user-images.githubusercontent.com/89085993/233971723-adce28b3-1148-45de-a4f3-48996064196c.png)
+![Screenshot_1682332128](https://user-images.githubusercontent.com/89085993/233972357-1962a0f8-de49-489f-b8a0-1929be20dc99.png)
+
 
 Экран камеры:
-![Screenshot_1682332135](https://user-images.githubusercontent.com/89085993/233971948-a885ac82-0b6a-41b5-aa5f-a32cb4edc29f.png)
+![Screenshot_1682332135](https://user-images.githubusercontent.com/89085993/233972374-c1808c88-1d8e-4363-afc6-e69c7b347b3e.png)
+
 
 Экран отображения результатов, при клике по ссылке она копируется в буфер обмена
-![Screenshot_1682332142](https://user-images.githubusercontent.com/89085993/233972075-35626889-9b2b-40db-bf69-cf2a264c0c95.png)
+![Screenshot_1682332142](https://user-images.githubusercontent.com/89085993/233972394-d01eec66-efad-408c-a8c9-7adde7efa214.png)
+
