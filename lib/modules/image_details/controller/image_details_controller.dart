@@ -6,7 +6,7 @@ class ImageDetailsController extends GetxController {
   ImageDetailsController(this._homePageProvider);
 
   final ImageDetailPageProvider _homePageProvider;
-  String imagePath = '';
+  String _imagePath = '';
   Rxn<ImageDataInfo> imageData = Rxn<ImageDataInfo>();
   RxBool isLoading = true.obs;
 
@@ -15,8 +15,8 @@ class ImageDetailsController extends GetxController {
     super.onInit();
 
     if (Get.arguments != null) {
-      imagePath = Get.arguments['imagePath'];
-      imageData.value = await _homePageProvider.getImageInfo(imagePath);
+      _imagePath = Get.arguments['imagePath'];
+      imageData.value = await _homePageProvider.getImageInfo(_imagePath);
       isLoading.value = false;
     }
   }
