@@ -8,7 +8,7 @@ class ImageDetailsBinding extends Bindings {
   void dependencies() {
     Get.lazyPut<ImageDetailPageRepository>(() => ImageDetailPageRepository());
     Get.lazyPut<ImageDetailPageProvider>(
-        () => ImageDetailPageProvider(Get.find()));
+        () => ImageDetailPageProviderImpl(Get.find()));
 
     Get.lazyPut<ImageDetailsController>(
         () => ImageDetailsController(Get.find()));

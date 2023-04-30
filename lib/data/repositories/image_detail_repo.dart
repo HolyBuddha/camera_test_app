@@ -21,10 +21,10 @@ class ImageDetailPageRepository {
       if (response.statusCode == 200) {
         return ImageDataInfo.fromJson(json.decode(response.body));
       } else {
-        throw ServerException();
+        throw ServerException(message: 'Response code: ${json.decode(response.body)['error']['message']}');
       }
-    } catch (_) {
-      throw ServerException();
+    } catch (e) {
+      throw ServerException(message: e.toString());
     }
   }
 }

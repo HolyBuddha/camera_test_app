@@ -3,9 +3,9 @@ import 'package:camera_test_app/data/providers/image_detail_page_provider.dart';
 import 'package:get/get.dart';
 
 class ImageDetailsController extends GetxController {
-  ImageDetailsController(this._imagePageProvider);
+  ImageDetailsController(this._imageDetailProvider);
 
-  final ImageDetailPageProvider _imagePageProvider;
+  final ImageDetailPageProvider _imageDetailProvider;
   String _imagePath = '';
   Rxn<ImageDataInfo> imageData = Rxn<ImageDataInfo>();
   RxBool isLoading = true.obs;
@@ -16,7 +16,7 @@ class ImageDetailsController extends GetxController {
 
     if (Get.arguments != null) {
       _imagePath = Get.arguments['imagePath'];
-      imageData.value = await _imagePageProvider.getImageInfo(_imagePath);
+      imageData.value = await _imageDetailProvider.getImageInfo(_imagePath);
       isLoading.value = false;
     }
   }

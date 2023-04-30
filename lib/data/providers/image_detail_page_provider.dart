@@ -1,17 +1,23 @@
 import 'package:camera_test_app/data/models/image_data_info.dart';
 import 'package:camera_test_app/data/repositories/image_detail_repo.dart';
-import 'package:camera_test_app/utils/errors/exceptions.dart';
+import 'package:get/get.dart';
 
-class ImageDetailPageProvider {
-  final ImageDetailPageRepository _homePageRepository;
+abstract class ImageDetailPageProvider {
+  Future<ImageDataInfo?> getImageInfo(String filePath);
+}
 
-  ImageDetailPageProvider(this._homePageRepository);
+class ImageDetailPageProviderImpl implements ImageDetailPageProvider {
+  final ImageDetailPageRepository _imagePageRepository;
 
+  ImageDetailPageProviderImpl(this._imagePageRepository);
+
+  @override
   Future<ImageDataInfo?> getImageInfo(String filePath) async {
     try {
-      ImageDataInfo imageInfo = await _homePageRepository.uploadImage(filePath);
+      var imageInfo = await _imagePageRepository.uploadImage(filePath);
       return imageInfo;
-    } on ServerException {
+    } catch (e) {
+      Get.log(e.toString(), isError: true);
       return null;
     }
   }

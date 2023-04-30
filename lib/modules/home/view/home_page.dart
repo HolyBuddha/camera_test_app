@@ -1,4 +1,3 @@
-import 'package:camera_test_app/routes/app_routes.dart';
 import 'package:camera_test_app/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:camera_test_app/utils/constants/app_text.dart';
@@ -24,11 +23,8 @@ class HomePage extends GetView<HomeController> {
             const Text(TextConsts.textForCameraButton),
             ElevatedButton(
               onPressed: () async {
-                await controller.getImagePath(ImageSource.camera);
-                if (controller.imagePath.isNotEmpty) {
-                  Get.toNamed(AppRoutes.imageDetails,
-                      arguments: {'imagePath': controller.imagePath});
-                }
+               await controller.getImagePath(ImageSource.camera);
+               controller.toImageDetails();
               },
               child: const Icon(Icons.camera_alt, color: Colors.black),
               style: ElevatedButton.styleFrom(

@@ -13,7 +13,7 @@ class AppPages {
       binding: HomeBinding(),
     ),
     GetPage(
-      name: AppRoutes.imageDetails,
+      name: AppRoutes.DETAILS,
       page: () => const ImageDetailsPage(),
       binding: ImageDetailsBinding(),
     ),
